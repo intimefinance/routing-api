@@ -17,13 +17,24 @@ import { RoutingLambdaStack } from './routing-lambda-stack'
 import { RoutingDatabaseStack } from './routing-database-stack'
 
 export const CHAINS_NOT_MONITORED: ChainId[] = [
-  ChainId.RINKEBY,
-  ChainId.ARBITRUM_RINKEBY,
+  ChainId.MAINNET,
   ChainId.ROPSTEN,
-  ChainId.KOVAN,
-  ChainId.OPTIMISTIC_KOVAN,
+  ChainId.RINKEBY,
   ChainId.GÖRLI,
+  ChainId.KOVAN,
+  ChainId.OPTIMISM,
+  ChainId.OPTIMISM_GOERLI,
+  ChainId.OPTIMISTIC_KOVAN,
+  ChainId.ARBITRUM_ONE,
+  ChainId.ARBITRUM_RINKEBY,
+  ChainId.ARBITRUM_GOERLI,
+  ChainId.POLYGON,
   ChainId.POLYGON_MUMBAI,
+  ChainId.CELO,
+  ChainId.CELO_ALFAJORES,
+  ChainId.GNOSIS,
+  ChainId.MOONBEAM,
+  ChainId.BSC,
 ]
 
 export class RoutingAPIStack extends cdk.Stack {

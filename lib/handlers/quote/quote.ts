@@ -1,6 +1,5 @@
 import Joi from '@hapi/joi'
 import { Protocol } from '@uniswap/router-sdk'
-import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk'
 import { PermitSingle } from '@uniswap/permit2-sdk'
 import { Currency, CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import {
@@ -32,6 +31,7 @@ import { utils } from 'ethers'
 import { simulationStatusToString } from './util/simulation'
 import Logger from 'bunyan'
 import { PAIRS_TO_TRACK } from './util/pairs-to-track'
+import { UNIVERSAL_ROUTER_ADDRESS } from '../../util/universalRouterAddress'
 
 export class QuoteHandler extends APIGLambdaHandler<
   ContainerInjected,

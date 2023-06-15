@@ -16,10 +16,7 @@ import {
   USDT_MAINNET,
   WBTC_MAINNET,
 } from '@uniswap/smart-order-router'
-import {
-  PERMIT2_ADDRESS,
-  UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN,
-} from '@uniswap/universal-router-sdk'
+import { PERMIT2_ADDRESS } from '@uniswap/universal-router-sdk'
 import { MethodParameters } from '@uniswap/smart-order-router'
 import { fail } from 'assert'
 import axiosStatic, { AxiosResponse } from 'axios'
@@ -38,6 +35,7 @@ import { Permit2__factory } from '../../lib/types/ext'
 import { resetAndFundAtBlock } from '../utils/forkAndFund'
 import { getBalance, getBalanceAndApprove } from '../utils/getBalanceAndApprove'
 import { DAI_ON, getAmount, getAmountFromToken, UNI_MAINNET, USDC_ON, USDT_ON, WNATIVE_ON } from '../utils/tokens'
+import { UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN } from '../../lib/util/universalRouterAddress'
 
 const { ethers } = hre
 
@@ -1905,6 +1903,7 @@ describe('quote', function () {
     [ChainId.GNOSIS]: null,
     [ChainId.ARBITRUM_GOERLI]: null,
     [ChainId.BSC]: USDC_ON(ChainId.BSC),
+    [ChainId.CORE_TEST]: null,
   }
 
   const TEST_ERC20_2: { [chainId in ChainId]: Token | null } = {
@@ -1926,6 +1925,7 @@ describe('quote', function () {
     [ChainId.GNOSIS]: null,
     [ChainId.ARBITRUM_GOERLI]: null,
     [ChainId.BSC]: USDT_ON(ChainId.BSC),
+    [ChainId.CORE_TEST]: null,
   }
 
   // TODO: Find valid pools/tokens on optimistic kovan and polygon mumbai. We skip those tests for now.

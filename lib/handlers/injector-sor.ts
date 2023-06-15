@@ -44,23 +44,26 @@ import { AWSTokenListProvider } from './router-entities/aws-token-list-provider'
 import { DynamoRouteCachingProvider } from './router-entities/route-caching/dynamo-route-caching-provider'
 
 export const SUPPORTED_CHAINS: ChainId[] = [
-  ChainId.MAINNET,
-  ChainId.RINKEBY,
-  ChainId.ROPSTEN,
-  ChainId.KOVAN,
-  ChainId.OPTIMISM,
-  ChainId.OPTIMISTIC_KOVAN,
-  ChainId.ARBITRUM_ONE,
-  ChainId.ARBITRUM_RINKEBY,
-  ChainId.ARBITRUM_GOERLI,
-  ChainId.POLYGON,
-  ChainId.POLYGON_MUMBAI,
-  ChainId.GÖRLI,
-  ChainId.CELO,
-  ChainId.CELO_ALFAJORES,
-  ChainId.BSC,
+  // ChainId.MAINNET,
+  // ChainId.RINKEBY,
+  // ChainId.ROPSTEN,
+  // ChainId.KOVAN,
+  // ChainId.OPTIMISM,
+  // ChainId.OPTIMISTIC_KOVAN,
+  // ChainId.ARBITRUM_ONE,
+  // ChainId.ARBITRUM_RINKEBY,
+  // ChainId.ARBITRUM_GOERLI,
+  // ChainId.POLYGON,
+  // ChainId.POLYGON_MUMBAI,
+  // ChainId.GÖRLI,
+  // ChainId.CELO,
+  // ChainId.CELO_ALFAJORES,
+  // ChainId.BSC,
+  ChainId.CORE_TEST,
 ]
-const DEFAULT_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
+const DEFAULT_TOKEN_LIST = 'https://raw.githubusercontent.com/intimefinance/intime-token-list/main/tokenlist.json'
+
+UNSUPPORTED_TOKEN_LIST.tokens = []
 
 export interface RequestInjected<Router> extends BaseRInj {
   chainId: ChainId

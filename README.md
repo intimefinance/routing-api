@@ -90,3 +90,6 @@ The integration tests fetch quotes from your deployed API, then execute the swap
    ```
    npm run integ-test
    ```
+
+### TODO
+Update UNSUPPORTED_TOKEN_LIST for core.

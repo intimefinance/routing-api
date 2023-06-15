@@ -244,21 +244,22 @@ export class RoutingAPIPipeline extends Stack {
 const app = new cdk.App()
 
 const jsonRpcProviders = {
-  WEB3_RPC_1: process.env.JSON_RPC_PROVIDER_1!,
-  WEB3_RPC_3: process.env.JSON_RPC_PROVIDER_3!,
-  WEB3_RPC_4: process.env.JSON_RPC_PROVIDER_4!,
-  WEB3_RPC_5: process.env.JSON_RPC_PROVIDER_5!,
-  WEB3_RPC_42: process.env.JSON_RPC_PROVIDER_42!,
-  WEB3_RPC_10: process.env.JSON_RPC_PROVIDER_10!,
-  WEB3_RPC_69: process.env.JSON_RPC_PROVIDER_69!,
-  WEB3_RPC_42161: process.env.JSON_RPC_PROVIDER_42161!,
-  WEB3_RPC_421611: process.env.JSON_RPC_PROVIDER_421611!,
-  WEB3_RPC_421613: process.env.JSON_RPC_PROVIDER_421613!,
-  WEB3_RPC_137: process.env.JSON_RPC_PROVIDER_137!,
-  WEB3_RPC_80001: process.env.JSON_RPC_PROVIDER_80001!,
-  WEB3_RPC_42220: process.env.JSON_RPC_PROVIDER_42220!,
-  WEB3_RPC_44787: process.env.JSON_RPC_PROVIDER_44787!,
-  WEB3_RPC_56: process.env.JSON_RPC_PROVIDER_56!,
+  // WEB3_RPC_1: process.env.JSON_RPC_PROVIDER_1!,
+  // WEB3_RPC_3: process.env.JSON_RPC_PROVIDER_3!,
+  // WEB3_RPC_4: process.env.JSON_RPC_PROVIDER_4!,
+  // WEB3_RPC_5: process.env.JSON_RPC_PROVIDER_5!,
+  // WEB3_RPC_42: process.env.JSON_RPC_PROVIDER_42!,
+  // WEB3_RPC_10: process.env.JSON_RPC_PROVIDER_10!,
+  // WEB3_RPC_69: process.env.JSON_RPC_PROVIDER_69!,
+  // WEB3_RPC_42161: process.env.JSON_RPC_PROVIDER_42161!,
+  // WEB3_RPC_421611: process.env.JSON_RPC_PROVIDER_421611!,
+  // WEB3_RPC_421613: process.env.JSON_RPC_PROVIDER_421613!,
+  // WEB3_RPC_137: process.env.JSON_RPC_PROVIDER_137!,
+  // WEB3_RPC_80001: process.env.JSON_RPC_PROVIDER_80001!,
+  // WEB3_RPC_42220: process.env.JSON_RPC_PROVIDER_42220!,
+  // WEB3_RPC_44787: process.env.JSON_RPC_PROVIDER_44787!,
+  // WEB3_RPC_56: process.env.JSON_RPC_PROVIDER_56!,
+  WEB3_RPC_1115: process.env.JSON_RPC_PROVIDER_1115!,
 }
 
 // Local dev stack
@@ -278,6 +279,6 @@ new RoutingAPIStack(app, 'RoutingAPIStack', {
   tenderlyAccessKey: process.env.TENDERLY_ACCESS_KEY!,
 })
 
-new RoutingAPIPipeline(app, 'RoutingAPIPipelineStack', {
-  env: { account: '644039819003', region: 'us-east-2' },
-})
+// new RoutingAPIPipeline(app, 'RoutingAPIPipelineStack', {
+//   env: { account: '532858634997', region: 'us-east-1' },
+// })
