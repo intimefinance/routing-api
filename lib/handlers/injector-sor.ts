@@ -31,7 +31,7 @@ import {
   V2QuoteProvider,
   V3PoolProvider,
   IRouteCachingProvider,
-} from '@uniswap/smart-order-router'
+} from '@intimefinance/smart-order-router'
 import { TokenList } from '@uniswap/token-lists'
 import { default as bunyan, default as Logger } from 'bunyan'
 import { ethers } from 'ethers'

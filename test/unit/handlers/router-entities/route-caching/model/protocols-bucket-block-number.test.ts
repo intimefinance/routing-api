@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { ProtocolsBucketBlockNumber } from '../../../../../../lib/handlers/router-entities/route-caching/model/protocols-bucket-block-number'
-import { Protocol } from '@uniswap/router-sdk'
+import { Protocol } from '@intimefinance/router-sdk'
 
 describe('ProtocolsBucketBlockNumber', () => {
   describe('#fullKey', () => {

@@ -13,7 +13,7 @@ import {
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
-} from '@uniswap/smart-order-router'
+} from '@intimefinance/smart-order-router'
 import { MethodParameters, Pool, Position } from '@uniswap/v3-sdk'
 import { fail } from 'assert'
 import axios, { AxiosResponse } from 'axios'

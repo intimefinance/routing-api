@@ -1,5 +1,5 @@
-import { MixedRoute, V2Route, V3Route } from '@uniswap/smart-order-router/build/main/routers'
-import { Protocol } from '@uniswap/router-sdk'
+import { MixedRoute, V2Route, V3Route } from '@intimefinance/smart-order-router/build/main/routers'
+import { Protocol } from '@intimefinance/router-sdk'
 import { MarshalledToken, TokenMarshaller } from './token-marshaller'
 import { MarshalledPair, PairMarshaller } from './pair-marshaller'
 import { MarshalledPool, PoolMarshaller } from './pool-marshaller'

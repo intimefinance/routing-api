@@ -1,7 +1,7 @@
-import { CachedRoutes } from '@uniswap/smart-order-router'
-import { ChainId } from '@uniswap/smart-order-router/build/main/util'
+import { CachedRoutes } from '@intimefinance/smart-order-router'
+import { ChainId } from '@intimefinance/smart-order-router/build/main/util'
 import { TradeType } from '@uniswap/sdk-core'
-import { Protocol } from '@uniswap/router-sdk'
+import { Protocol } from '@intimefinance/router-sdk'
 import { MarshalledToken, TokenMarshaller } from './token-marshaller'
 import { CachedRouteMarshaller, MarshalledCachedRoute } from './cached-route-marshaller'
 

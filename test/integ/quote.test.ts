@@ -15,9 +15,10 @@ import {
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
-} from '@uniswap/smart-order-router'
-import { PERMIT2_ADDRESS } from '@uniswap/universal-router-sdk'
-import { MethodParameters } from '@uniswap/smart-order-router'
+} from '@intimefinance/smart-order-router'
+import { UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN } from '@intimefinance/universal-router-sdk'
+import { PERMIT2_ADDRESS } from '@intimefinance/universal-router-sdk'
+import { MethodParameters } from '@intimefinance/smart-order-router'
 import { fail } from 'assert'
 import axiosStatic, { AxiosResponse } from 'axios'
 import axiosRetry from 'axios-retry'
@@ -35,7 +36,6 @@ import { Permit2__factory } from '../../lib/types/ext'
 import { resetAndFundAtBlock } from '../utils/forkAndFund'
 import { getBalance, getBalanceAndApprove } from '../utils/getBalanceAndApprove'
 import { DAI_ON, getAmount, getAmountFromToken, UNI_MAINNET, USDC_ON, USDT_ON, WNATIVE_ON } from '../utils/tokens'
-import { UNIVERSAL_ROUTER_ADDRESS as UNIVERSAL_ROUTER_ADDRESS_BY_CHAIN } from '../../lib/util/universalRouterAddress'
 
 const { ethers } = hre
 

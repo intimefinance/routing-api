@@ -1,5 +1,5 @@
 import Joi from '@hapi/joi'
-import { Protocol } from '@uniswap/router-sdk'
+import { Protocol } from '@intimefinance/router-sdk'
 import { PermitSingle } from '@uniswap/permit2-sdk'
 import { Currency, CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import {
@@ -13,7 +13,8 @@ import {
   SimulationStatus,
   IMetric,
   ChainId,
-} from '@uniswap/smart-order-router'
+} from '@intimefinance/smart-order-router'
+import { UNIVERSAL_ROUTER_ADDRESS } from '@intimefinance/universal-router-sdk'
 import { Pool } from '@uniswap/v3-sdk'
 import JSBI from 'jsbi'
 import _ from 'lodash'
@@ -31,7 +32,6 @@ import { utils } from 'ethers'
 import { simulationStatusToString } from './util/simulation'
 import Logger from 'bunyan'
 import { PAIRS_TO_TRACK } from './util/pairs-to-track'
-import { UNIVERSAL_ROUTER_ADDRESS } from '../../util/universalRouterAddress'
 
 export class QuoteHandler extends APIGLambdaHandler<
   ContainerInjected,

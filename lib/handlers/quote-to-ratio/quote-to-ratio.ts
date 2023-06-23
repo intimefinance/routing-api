@@ -1,5 +1,5 @@
 import Joi from '@hapi/joi'
-import { CondensedAddLiquidityOptions, Protocol } from '@uniswap/router-sdk'
+import { CondensedAddLiquidityOptions, Protocol } from '@intimefinance/router-sdk'
 import { Currency, CurrencyAmount, Fraction } from '@uniswap/sdk-core'
 import {
   AlphaRouterConfig,
@@ -10,7 +10,7 @@ import {
   SwapAndAddOptions,
   SwapToRatioStatus,
   SwapType,
-} from '@uniswap/smart-order-router'
+} from '@intimefinance/smart-order-router'
 import { Position } from '@uniswap/v3-sdk'
 import JSBI from 'jsbi'
 import { APIGLambdaHandler, ErrorResponse, HandleRequestParams, Response } from '../handler'

@@ -1,6 +1,7 @@
-import { Pair } from '@uniswap/v2-sdk'
+import { Pair } from '@intimefinance/v2-sdk'
 import { CurrencyAmountMarshaller, MarshalledCurrencyAmount } from './currency-amount-marshaller'
-import { Protocol } from '@uniswap/router-sdk'
+import { Protocol } from '@intimefinance/router-sdk'
+import { V2_CORE_FACTORY_ADDRESSES } from '../../../../util/constants'
 
 export interface MarshalledPair {
   protocol: Protocol
@@ -19,6 +20,7 @@ export class PairMarshaller {
 
   public static unmarshal(marshalledPair: MarshalledPair): Pair {
     return new Pair(
+      V2_CORE_FACTORY_ADDRESSES[marshalledPair.currencyAmountA.currency.chainId] as string,
       CurrencyAmountMarshaller.unmarshal(marshalledPair.currencyAmountA),
       CurrencyAmountMarshaller.unmarshal(marshalledPair.tokenAmountB)
     )

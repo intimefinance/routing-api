@@ -1,5 +1,5 @@
-import { Protocol } from '@uniswap/router-sdk'
-import { ChainId, V3SubgraphProvider } from '@uniswap/smart-order-router'
+import { Protocol } from '@intimefinance/router-sdk'
+import { ChainId, V3SubgraphProvider } from '@intimefinance/smart-order-router'
 
 export const chainProtocols = [
   // V3.
